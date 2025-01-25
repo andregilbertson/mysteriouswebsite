@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Finale</title>
+        <link rel="stylesheet" href="style2.css">
+        <script defer src="app2.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        
+    </head>
+
+    <body>
+        <div class="bg-image"></div>
+        <div id="pre-text" style="padding-bottom:0px"><span class="auto-type-3"></span></div>
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script>
+            var typed3 = new Typed(".auto-type-3", {
+                strings: ["incorrect but here's a clue:", "my favorite number might help you"],
+                typeSpeed: 50,
+                backSpeed: 0,
+                loop: false,
+            });
+
+            function delay(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+
+            delay(6000).then(() => {
+                textElement = document.getElementById('pre-text');
+                textElement.classList.add('fade-out');
+            }).then(() => delay(2000).then(() => location.replace('r.html')));
+
+
+        </script>
+    </body>
